@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link
+      href="fonts/fontawesome-free-5.15.1-web/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/homeStyle.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- navbar Start-->
+      <section>
+        <nav class="navbar navbar-expand-sm navbar-light">
+          <div class="navbar-brand">
+            <i class="fab fa-google-wallet"></i>
+            <span id="title">Acadmy </span>
+          </div>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <!-- navbar End -->
+
+      <!-- Hero -->
+      <div class="row m-1 align-items-center">
+        <div class="col-md-6">
+          <p class="h1">Attendance System</p>
+          <p class="mt-4" id="description">
+            If you want to join us, you must register the information. then log
+            in
+          </p>
+
+          <div
+            class="mt-5 col-md-6 align-content-center"
+            id="home-buttons-group"
+          >
+            <button
+              type="button"
+              name="login"
+              id="login"
+              class="btn d-block d-md-inline-block btn-block"
+              data-toggle="modal"
+              data-target="#modelId"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              name="register"
+              id="register"
+              class="btn d-block d-md-inline-block btn-block"
+              data-toggle="modal"
+              data-target="#modelId2"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img
+            src="./imgs/2.svg"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Login Modal -->
+      <section class="login">
+        <div
+          class="modal fade"
+          id="modelId"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modelTitleId"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div>
+                  <img
+                    src="imgs/undraw_forgot_password_gi2d.png"
+                    id="login-img"
+                    class="rounded-circle"
+                    alt="login"
+                  />
+                  <p class="h3">Login</p>
+                </div>
+                <div class="container-fluid mt-4">
+                  <form novalidate="" action="" method="" id="Form2">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="emaillog"
+
+                        placeholder="email"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                        required
+                      />
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        id="passwordlog"
+                        placeholder="Password"
+                        minlength="8"
+                        maxlength="12"
+                        required
+                        autocomplete="off"
+                      />
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-block"
+                      id="model-login"
+                    >
+                      Login
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of login model -->
+
+      <!-- Register Modal -->
+      <section class="register">
+        <div
+          class="modal fade"
+          id="modelId2"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modelTitleId"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div>
+                  <img
+                    src="imgs/undraw_forgot_password_gi2d.png"
+                    id="login-img"
+                    class="rounded-circle"
+                    alt="login"
+                  />
+                  <p class="h3">Register</p>
+                </div>
+                <div class="container-fluid mt-4">
+                  <form novalidate="" action="" method="" id="Form">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="username"
+                        id="username"
+                        aria-describedby="helpId"
+                        placeholder="User Name"
+                        pattern="^[a-zA-Z]{2}[a-zA-Z0-9]+$"
+                        required
+                      />
+
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="password"
+                        id="password"
+                        aria-describedby="helpId"
+                        placeholder="password"
+                        minlength="8"
+                        maxlength="12"
+                        required
+                      />
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="address"
+                        id="address"
+                        aria-describedby="helpId"
+                        placeholder="Address"
+                        pattern="^\d+\s[A-z]+\s[A-z]+$"
+                        required
+                      />
+
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email-register"
+                        aria-describedby="emailHelpId"
+                        placeholder="Email"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                        required
+                      />
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="date"
+                        class="form-control"
+                        name="date"
+                        id="date"
+                        aria-describedby="helpId"
+                        max="2000-12-1"
+                        min="1960-1-1"
+                        placeholder="datr"
+                        required
+                      />
+
+                      <div class="valid-feedback">Valide.</div>
+                      <div class="invalid-feedback">
+                        please fill out this filde.
+                      </div>
+                    </div>
+
+                    <button class="btn btn-block" id="model-sumbit">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of register Model -->
+    </div>
+
+    <script src="js/JQuery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jsproject/emp.js"></script>
+    <script src="js/jsproject/home.js"></script>
+    
+   
+  </body>
+</html>

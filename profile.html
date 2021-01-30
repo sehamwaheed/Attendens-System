@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="fonts/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="css/profileStyle.css">
+
+</head>
+
+<body>
+
+
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <ul class="navbar-nav  sidebar  " id="accordionSidebar"
+            style=" background: linear-gradient(to right, #61ba6d, #83c331);">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <img src="imgs/man.png" width="50" height="50"
+                    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circl}" alt="">
+
+                <div  class="sidebar-brand-text mx-3">
+                    User
+                </div>
+            </a>
+            <!-- divider -->
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-heading ">
+                Reports
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item" id="show-dailey-report" onclick="getReport()">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Daily Report</span> </a>
+            </li>
+            <li class="nav-item" id="show-monthely-report">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Monthley Report</span> </a>
+            </li>
+            <hr class="sidebar-divider">
+
+            <section  id="takeAttendence">
+                <div class="sidebar-heading">
+                    Attends
+                </div>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item" id="show-attends-from">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-pen-square"></i>
+                        <span>Attends Page</span> </a>
+                </li>
+                <hr class="sidebar-divider">
+                <div class="sidebar-heading">
+                    Excuse
+                </div>
+                <li class="nav-item" id="showExcuseFrom">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Excuse Page</span> </a>
+                </li>
+
+            </section>
+
+            <button class="btn btn-warning  w-50 ml-5 " id="savebtn"> daily </button>
+        </br>
+            <button class="btn btn-warning  w-50 ml-5 " id="monthbtn"> monthely </button>
+
+         
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                  
+                    <ul class="navbar-nav mr-auto">
+                        <p id="tittelProfile" class="h4">Account</p>
+                    </ul>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="profileUsername" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img id="imgProfile" class="img-profile rounded-circle" src="imgs/man.png">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="index.html" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Dailey Report Cart -->
+                    <div class="card text-left border-left-primary" id="daileyReport">
+                        <!-- card wrapper -->
+                        <div class="card-header">
+                           
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- info part -->
+                                <div id="info" class="col-12 col-md-6">
+                                    <div id="info-header">
+                                        <img id="dailyReportImg" src="imgs/man.png" width="100" height="100" class="rounded-circle m-auto"
+                                            alt="">
+                                        <p id="daileyReportUserName" class="h3 mt-1">Dina</p>
+                                    </div>
+                                    <div id="info-content" class="d-none d-md-block">
+                                        <div id="info-data" class="m-1">
+                                            <i class="fas fa-envelope mr-1"></i>
+                                            <span id="daileyReportEmail" class="text">dinawaheed@yahoo.com</span>
+                                        </div>
+                                        <div id="info-data" class="m-1">
+                                            <i class="fas fa-home mr-1"></i>
+                                            <span id="daileyReportAddress" class="text">23 Fox Squre, New Jersy</span>
+                                        </div>
+                                    </div>
+                                </div>
+       
+                                <!-- report part -->
+                                <div id="report" class="col-12 col-md-6  p-2">
+                                    <div class="alert-head h3 text-secondary text-center">
+                                        <span class="text text-success">Dailey Report</span>
+                                    </div>
+                                    <!-- arrive time card -->
+                                    <div  id="dailyCard" class="card shadow border-left-success py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div  id="dailyArriveTitel"
+                                                        class="text-sm font-weight-bold text-success text-uppercase mb-1">
+                                                        Arrive Time</div>
+                                                    <div id="dailyArriveNumber" class="h5 mb-0 font-weight-bold text-gray-800">8:00 AM
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-stopwatch fa-2x text-gray-500"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- late time card -->
+                                    <div id="dailyLate" class="card shadow mt-2 border-left-danger py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div id="dailyLateTitel"
+                                                        class="text-sm font-weight-bold text-success text-uppercase mb-1">
+                                                        Late</div>
+                                                    <div id="dailyLateNumber" class="h5 mb-0 font-weight-bold text-gray-800">12 M
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-hourglass-end fa-2x text-gray-500"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of card wrapper -->
+                    </div>
+                    <!-- end daiely report -->
+
+
+                    <!-- start Monthley Report -->
+                    <div class="card text-left border-left-primary " id="monthelyReport">
+                        <!-- card wrapper -->
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- report part -->
+                                <div id="report" class="col-12   p-2">
+                                    <div class="alert-head h3 text-secondary text-center">
+                                        <span class="text text-success">Monthley Report</span>
+                                    </div>
+                                    <!-- arrive time card -->
+                                    <div class="card shadow border-left-success py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div id="monthlyAttendensReport"
+                                                        class="text-sm font-weight-bold text-success text-uppercase mb-1">
+                                                        Attends</div>
+                                                    <div  id="monthlyAttendensNumber" class="h5 mb-0 font-weight-bold text-gray-800"> Day
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-user-edit fa-2x text-gray-500"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- absent time card -->
+                                    <div class="card shadow mt-2 border-left-danger py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div id="monthlyAbsentReport"
+                                                        class="text-sm font-weight-bold text-success text-uppercase mb-1">
+                                                        Absent</div>
+                                                    <div id="monthlyAbsentNumber" class="h5 mb-0 font-weight-bold text-gray-800"> times
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-user-times fa-2x text-gray-500"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                            
+                                    <!-- late time card -->
+                                    <div class="card shadow mt-2 border-left-warning  py-2">
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div id="monthlylateReport"
+                                                        class="text-sm font-weight-bold text-success text-uppercase mb-1">
+                                                        Late</div>
+                                                    <div id="monthlylateNumber" class="h5 mb-0 font-weight-bold text-gray-800"> times
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-user-clock fa-2x text-gray-500"></i>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                           
+                            </div>
+                        </div>
+                        <!-- end of card wrapper -->
+                    </div>
+                    <!-- end Monthley Report -->
+
+                    <!-- Start Attends Form -->
+                    <section class="col-12 col-md-6 offset-md-3">
+                        <div class="card text-white text-center " id="attendsCard">
+                            <div class="card-body">
+                                <p class="h2 text">Attends Form</p>
+                                <form class="m-auto p-4" action="" id="attendsForm">
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-prepend "><i
+                                                class="input-group-text fa fa-user"></i></span>
+                                        <input id="inputCodeAttend" type="text" class="form-control" placeholder="User Name">
+                                    </div>
+
+                                    <button id="btnAttend" type="button" class="btn btn-warning btn-block mt-4" data-toggle="modal"
+                                        data-target="#modelId">Confirm
+                                        Attends</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- strat confirm attends -->
+                    <!-- Modal confirm atendence -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <!-- info -->
+                                    <p  id="attendensMessage" class="alert alert-success">Username: Dina<br>Password: 552454</p>
+                                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+                                        data-target="#modelId">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End confirm attends -->
+
+                    
+                    <!-- start exucse model -->
+                    <section class="col-12 col-md-6 offset-md-3">
+                        <div class="card text-white shadow text-center" id="excuseCard">
+                            <div class="card-body">
+                                <p class="h2 text">Excuse Form</p>
+                                <form class="m-auto p-4" action="" id="excuseForm">
+                                    <div class="input-group mt-2">
+                                        <span class="input-group-prepend "><i
+                                                class="input-group-text fa fa-user"></i></span>
+                                        <input id="employeeCodeExcuseInput" type="text" class="form-control"
+                                            placeholder="Employee Code">
+                                    </div>
+
+                                    <button id="excuseButton" type="button" class="btn btn-warning btn-block mt-4"
+                                        data-toggle="modal" data-target="#excuseModel">excuse</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- end exucse model -->
+                 
+                         <!-- strat confirm excuse -->
+                    <!-- Modal -->
+                    <div class="modal fade rounded-lg" id="excuseModel" tabindex="-1" role="dialog"
+                        aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <!-- info -->
+                                    <p id="excuseMessage" class="alert alert-success">Success</p>
+                                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+                                        data-target="#excuseModel">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End confirm excuse -->
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+
+    
+        </div>
+        <!-- End of Content Wrapper -->
+    
+    </div>
+
+        
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a id="AdminLogout" class="btn btn-primary" href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/JQuery-3.3.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vender/Chart.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/jsproject/profile.js"></script>
+     <script src="model/dailyReport.js"></script>
+     <script src="model/monthlyReport.js"></script>
+</body>
+
+</html>

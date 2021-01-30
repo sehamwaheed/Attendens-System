@@ -1,0 +1,41 @@
+.sidebar .nav-item .nav-link span,
+.sidebar .nav-item .nav-link i {
+  font-size: 2ex;
+}
+body {
+  user-select: none;
+}
+
+#info {
+  text-align: center;
+}
+
+#daileyReport,
+#monthelyReport {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+#attendsForm {
+  width: 70%;
+}
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #393e46;
+}
+#attendsCard,
+#excuseCard {
+  border-radius: 2em;
+  background: linear-gradient(to right, #61ba6d, #83c331);
+}
+
+.dropdown .dropdown-menu .dropdown-header {
+  background: linear-gradient(to right, #00adb5, #393e46);
+}
+#daileyReport,
+#monthelyReport,
+#attendsCard,
+#excuseCard {
+  display: none;
+}
